@@ -8,6 +8,7 @@ const init = document.getElementById("boutonInitialiser");
 
 
 
+
 ListeApprenants.forEach(apprenant =>{
 
     console.log(apprenant);
@@ -90,6 +91,19 @@ placer.addEventListener ("click", (event) => {
     init.disabled = false;
 });
 
+init.addEventListener('click', (event) => {
 
+    placer.disabled = false;
+    numSelect.disabled = false;
+    init.disabled = true;
 
+    const flip = document.querySelectorAll('.flipcard');
+
+    flip.forEach((flipped) =>{
+            
+        flipped.classList.toggle('flip');
+        
+    })
+
+})
 
